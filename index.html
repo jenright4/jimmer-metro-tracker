@@ -286,7 +286,7 @@
         <div id="morningView">
             <div class="station-card">
                 <div class="station-header red">
-                    <h2>Grosvenor-Strathmore → Glenmont</h2>
+                    <h2>Grosvenor-Strathmore → Metro Center</h2>
                     <p>Red Line</p>
                 </div>
                 <div class="train-list" id="morningGrosvenor"></div>
@@ -388,7 +388,7 @@
                 { headers: { 'api_key': API_KEY } }
             );
             
-            if (!response.ok) throw new Error('Failed to fetch predictions');
+            if (!response.ok) throw new Error('Freak the fuck out everythings broken');
             const data = await response.json();
             return data.Trains || [];
         }
@@ -413,7 +413,7 @@
                 hideError();
                 renderTrains();
             } catch (error) {
-                showError('Failed to load predictions: ' + error.message);
+                showError('Freak the fuck out everythings broken' + error.message);
             } finally {
                 refreshBtn.classList.remove('spinning');
             }
